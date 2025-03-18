@@ -56,7 +56,7 @@ Install dependencies:
 npm install
 ```
 
-Create a .env file and add:
+Create a ```.env``` file and add:
 
 ```bash
 VITE_TASKIFY_API=http://localhost:5000/

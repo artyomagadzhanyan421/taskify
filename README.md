@@ -13,7 +13,7 @@ Taskify is a task management application that allows users to create, edit, read
 - API Integration with [Taskify REST API](https://github.com/artyomagadzhanyan421/rest-api-taskify)  
 - Custom error handling and loading states  
 
-## Tech Stack  
+### Tech Stack  
 - [React](https://github.com/facebook/react.git) + [TypeScript](https://github.com/microsoft/TypeScript.git)
 - [Redux Toolkit](https://github.com/reduxjs/redux.git) for state management  
 - [React Router](https://github.com/remix-run/react-router.git) for navigation  
@@ -21,7 +21,7 @@ Taskify is a task management application that allows users to create, edit, read
 - [React Loading Skeleton](https://github.com/dvtng/react-loading-skeleton.git) for loading states
 - [Boxicons](https://github.com/atisawd/boxicons.git) for web icons integration
 
-## Pages  
+### Pages  
 - SignUp Page - Create a new account  
 - SignIn Page - Log in to access tasks  
 - Home Page - View tasks and navigate using the Navbar  
@@ -29,7 +29,7 @@ Taskify is a task management application that allows users to create, edit, read
 - Edit Page - Edit an existing task  
 - Add Page - Create a new task  
 
-## Components
+### Components
 - Navbar - Navigation bar with a sign-out button  
 - Tasks - Displays the list of tasks using a responsive grid layout  
 - NoTasks - Shows alert message if no tasks were created

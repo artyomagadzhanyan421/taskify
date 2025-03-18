@@ -13,13 +13,17 @@ Taskify is a task management application that allows users to create, edit, read
 - API Integration with [Taskify REST API](https://github.com/artyomagadzhanyan421/rest-api-taskify)  
 - Custom error handling and loading states  
 
-## Tech Stack  
+### Tech Stack  
 - [React](https://github.com/facebook/react.git) + [TypeScript](https://github.com/microsoft/TypeScript.git)
 - [Redux Toolkit](https://github.com/reduxjs/redux.git) for state management  
 - [React Router](https://github.com/remix-run/react-router.git) for navigation  
 - [Vite](https://github.com/vitejs/vite.git) for fast development  
 - [React Loading Skeleton](https://github.com/dvtng/react-loading-skeleton.git) for loading states
 - [Boxicons](https://github.com/atisawd/boxicons.git) for web icons integration
+
+# Pages & Components
+
+Some components and routes, for example ```/``` (home), ```/edit/:id```, or ```/read/:id```, are only accessible to authenticated users. When a user signs in, the server generates a JWT and sends it back to the client. The token is then stored in ```localStorage```.
 
 ### Pages  
 - SignUp Page - Create a new account  

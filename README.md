@@ -2,12 +2,15 @@
 
 Taskify is a task management application that allows users to create, edit, read, and delete tasks. This is the client-side of the project, built using **React** with **TypeScript** for a seamless and type-safe experience.  
 
+> [!WARNING]  
+> Ensure you have the latest versions of [Node.js](https://nodejs.org/) and [Git](https://git-scm.com/) installed before proceeding.
+
 ## Features  
 - JWT-based authentication (Sign Up, Sign In, Sign Out)  
 - CRUD operations for tasks  
 - Personalized greeting with the user's name  
 - Responsive UI 
-- API Integration with Taskify REST API  
+- API Integration with [Taskify REST API](https://github.com/artyomagadzhanyan421/rest-api-taskify)  
 - Custom error handling and loading states  
 
 ## Tech Stack  
@@ -48,13 +51,13 @@ Install dependencies:
 npm install
 ```
 
-Set up environment variables
+Create a .env file and add:
 
 ```bash
 VITE_TASKIFY_API=http://localhost:5000/
 ```
 
-Start the application
+Start the application:
 
 ```sh
 npm run dev

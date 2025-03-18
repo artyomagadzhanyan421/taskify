@@ -91,7 +91,7 @@
     -webkit-line-clamp: initial;
 }
 
-.taskDesc.noTasks {
+#noTasks {
     max-width: 500px;
     margin: 20px 0px 30px 0px;
 }

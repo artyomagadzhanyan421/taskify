@@ -14,10 +14,10 @@ Taskify is a task management application that allows users to create, edit, read
 - Custom error handling and loading states  
 
 ## Tech Stack  
-- React + TypeScript  
-- Redux Toolkit for state management  
-- React Router for navigation  
-- Vite for fast development  
+- [React](https://github.com/facebook/react.git) + [TypeScript](https://github.com/microsoft/TypeScript.git)
+- [Redux Toolkit](https://github.com/reduxjs/redux.git) for state management  
+- [React Router](https://github.com/remix-run/react-router.git) for navigation  
+- [Vite](https://github.com/vitejs/vite.git) for fast development  
 
 ## Pages  
 - Sign Up Page — Create a new account  

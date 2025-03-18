@@ -1,0 +1,100 @@
+.Navbar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+}
+
+nav {
+    background: #27272A;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.2);
+    gap: 10px;
+    padding: 20px 40px;
+    margin: 40px 0px;
+    border-radius: 100px;
+}
+
+.lightNav {
+    background-color: #F4F4F5;
+}
+
+nav a, 
+nav button {
+    color: white;
+    background: none;
+    border: none;
+    outline: none;
+    display: flex;
+    flex: content;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    width: fit-content;
+    font-size: 24px;
+    padding: 10.5px;
+    border-radius: 8px;
+
+    &:hover {
+        background-color: #3F3F46;
+        box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.2);
+    }
+}
+
+nav a.lightLink, 
+nav button.lightLink {
+    &:hover {
+        background-color: #E4E4E7;
+    }
+}
+
+nav a i, 
+nav button i {
+    color: white;
+}
+
+nav a i#iconLight, 
+nav button i#iconLight {
+    color: black;
+}
+
+nav a span, 
+nav button span {
+    background-color: #27272A;
+    color: white;
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-85px);
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.2);
+    transition: 0.2s;
+}
+
+nav a span.lightSpan, 
+nav button span.lightSpan {
+    background-color: #F4F4F5;
+    color: black;
+}
+
+nav a:hover span, 
+nav button:hover span {
+    pointer-events: all;
+    opacity: 1;
+    transform: translateY(-90px);
+}
+
+@media(max-width: 470px) {
+    nav {
+        margin: 0px;
+        border-radius: 0px;
+        width: 100%;
+    }
+}

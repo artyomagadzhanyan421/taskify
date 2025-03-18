@@ -1,0 +1,164 @@
+.taskGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 40px 0px 50px 0px;
+    gap: 20px;
+}
+
+.heading {
+    color: white;
+    width: fit-content;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 1.2em;
+}
+
+.heading.lightHead {
+    color: black;
+}
+
+.task {
+    background: #27272A;
+    border: 1.7px solid #3F3F46;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    font-size: 15px;
+}
+
+.task.lightTask {
+    background: #F4F4F5;
+    border-color: #E4E4E7;
+}
+
+#readTask {
+    width: 584px;
+    margin-bottom: 50px;
+}
+
+.taskTitle {
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    width: fit-content;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+}
+
+.taskTitle.lightTitle {
+    color: black;
+}
+
+.taskDate {
+    color: white;
+    background: #3F3F46;
+    width: fit-content;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+.taskDate.lightDate {
+    background: #E4E4E7;
+    color: black;
+}
+
+.taskDesc {
+    color: #E4E4E7;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    margin: 20px 0px;
+    line-height: 1.6em;
+    -webkit-line-clamp: 4;
+}
+
+.taskDesc.lightDesc {
+    color: #3F3F46;
+}
+
+#readTaskDesc {
+    margin: 20px 0px 0px 0px;
+    -webkit-line-clamp: initial;
+}
+
+#readTaskTitle {
+    -webkit-line-clamp: initial;
+}
+
+.taskDesc.noTasks {
+    max-width: 500px;
+    margin: 20px 0px 30px 0px;
+}
+
+.functions {
+    display: flex;
+    gap: 10px;
+}
+
+.functions {
+    width: fit-content;
+}
+
+.funcLink {
+    background-color: #7E22CE;
+    color: white;
+    display: flex;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    align-items: center;
+    width: fit-content;
+    font-size: 15px;
+    gap: 12.5px;
+    font-weight: 550;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.2);
+
+    &:hover {
+        background-color: #6B21A8;
+    }
+}
+
+@media(max-width: 1100px) {
+    .taskGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 750px) {
+    .taskGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 450px) {
+    .functions {
+        flex-direction: column;
+        width: initial;
+        gap: 8px;
+    }
+
+    .funcLink {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .taskGrid {
+        margin: 30px 0px 50px 0px;
+    }
+
+    .heading {
+        font-size: 30px;
+    }
+
+    .taskTitle {
+        font-size: 20px;
+    }
+}

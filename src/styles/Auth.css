@@ -1,0 +1,158 @@
+.Auth {
+    background: #18181B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 100px 30px;
+}
+
+.Auth.lightAuth {
+    background: #FAFAFA;
+}
+
+.boxFlex {
+    display: flex;
+    gap: 10px;
+}
+
+form {
+    background: #27272A;
+    display: flex;
+    flex-direction: column;
+    border: 1.7px solid #3F3F46;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.2);
+    gap: 10px;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+form h2 {
+    color: white;
+    width: fit-content;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.lightHead {
+    color: black;
+}
+
+.lightForm {
+    background: #F4F4F5;
+    border-color: #E4E4E7;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #A1A1AA;
+}
+
+form textarea,
+form input,
+form button {
+    color: white;
+    outline: none;
+    resize: none;
+    border: none;
+    background: none;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.lightInput {
+    color: black;
+}
+
+.lightInput::placeholder, 
+.lightText::placeholder {
+    color: #71717A;
+}
+
+.inputBox,
+form button, 
+form textarea {
+    background: #3F3F46;
+    display: flex;
+    align-items: center;
+    border: 1.7px solid transparent;
+    gap: 12.5px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.inputBox.lightBox,
+.lightText {
+    color: black;
+    background: #E4E4E7;
+}
+
+form textarea {
+    height: 300px;
+}
+
+.inputBox:focus-within,
+form textarea:focus-within {
+    border-color: #A1A1AA;
+}
+
+form button {
+    background-color: #7E22CE;
+    cursor: pointer;
+    justify-content: center;
+
+    &:hover {
+        background-color: #6B21A8;
+    }
+}
+
+form i {
+    color: #A1A1AA;
+    font-size: 25px;
+}
+
+#lightIcon {
+    color: #71717A;
+}
+
+.trash {
+    background-color: #B91C1C;
+
+    &:hover {
+        background-color: #991B1B;
+    }
+}
+
+.signInLink {
+    display: inline-block;
+    color: #71717A;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 550;
+}
+
+.error {
+    background-color: #FEE2E2;
+    color: #EF4444;
+    display: "flex";
+    font-weight: 550;
+    font-size: 15px;
+    padding: 15px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+.error.errNone {
+    display: none;
+}
+
+@media(max-width: 520px) {
+    .boxFlex {
+        flex-direction: column;
+    }
+
+    form {
+        width: 100%;
+    }
+}

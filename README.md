@@ -42,13 +42,13 @@ Some components and routes, for example ```/``` (home), ```/edit/:id```, or ```/
 - Add - create a new task  
 
 ### Components
-- Navbar - Navigation bar with a sign-out button  
-- Tasks - The list of tasks using a responsive grid layout  
-- NoTasks - Shows alert message if no tasks were created
-- Error - Renders API error messages  
-- LoadingTasks - Displays loader component for all tasks  
-- LoadingTask - Loading state for a single task
-- LoadingForm - Skeleton loader to render Edit page information 
+- Navbar - navigation bar with a sign-out button  
+- Tasks - the list of tasks using a responsive grid layout  
+- NoTasks - shows alert message if no tasks were created
+- Error - renders API error messages  
+- LoadingTasks - displays loader component for all tasks  
+- LoadingTask - loading state for a single task
+- LoadingForm - skeleton loader to render Edit page information 
 
 ## ⚙️ Installation & Setup
 

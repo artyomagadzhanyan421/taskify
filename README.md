@@ -40,10 +40,7 @@ Some components and routes, for example ```/``` (home), ```/edit/:id```, or ```/
 - Error - Renders API error messages  
 - LoadingTasks - Displays loader component for all tasks  
 - LoadingTask - Loading state for a single task
-- LoadingForm - Skeleton loader to render Edit page information
-
-|- src
-|   |- components
+- LoadingForm - Skeleton loader to render Edit page information 
 
 ## ⚙️ Installation & Setup
 

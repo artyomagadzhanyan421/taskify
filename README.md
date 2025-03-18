@@ -2,6 +2,7 @@
 
 ![Static Badge](https://img.shields.io/badge/20.16.0-%236cc24a?label=node)
 ![Static Badge](https://img.shields.io/badge/19.0.0-deepskyblue?label=react)
+![Static Badge](https://img.shields.io/badge/~5.7.2-dodgerblue?label=typescript)
 
 Taskify is a task management application that allows users to create, edit, read, and delete tasks. This is the client-side of the project, built using **React** with **TypeScript** for a seamless and type-safe experience.  
 

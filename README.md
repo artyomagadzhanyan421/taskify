@@ -2,7 +2,7 @@
 
 Taskify is a task management application that allows users to create, edit, read, and delete tasks. This is the client-side of the project, built using **React** with **TypeScript** for a seamless and type-safe experience.  
 
-> [!WARNING]  
+> [!IMPORTANT]  
 > Ensure you have the latest versions of [Node.js](https://nodejs.org/) and [Git](https://git-scm.com/) installed before proceeding.
 
 ## Features  

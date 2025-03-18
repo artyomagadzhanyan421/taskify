@@ -33,8 +33,6 @@ Some components and routes, for example ```/``` (home), ```/edit/:id```, or ```/
 - Edit Page - Edit an existing task  
 - Add Page - Create a new task  
 
-All pages located in ```./src/routes```
-
 ### Components
 - Navbar - Navigation bar with a sign-out button  
 - Tasks - Displays the list of tasks using a responsive grid layout  

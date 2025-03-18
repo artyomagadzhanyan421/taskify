@@ -21,7 +21,7 @@ Taskify is a task management application that allows users to create, edit, read
 - [React Loading Skeleton](https://github.com/dvtng/react-loading-skeleton.git) for loading states
 - [Boxicons](https://github.com/atisawd/boxicons.git) for web icons integration
 
-# Pages & Components
+## Pages & Components
 
 Some components and routes, for example ```/``` (home), ```/edit/:id```, or ```/read/:id```, are only accessible to authenticated users. When a user signs in, the server generates a JWT and sends it back to the client. The token is then stored in ```localStorage```.
 
@@ -42,7 +42,7 @@ Some components and routes, for example ```/``` (home), ```/edit/:id```, or ```/
 - LoadingTask - Shows loading state for a single task
 - LoadingForm - Lands Skeleton loader to render Edit page information
 
-# Installation & Setup
+## Installation & Setup
 
 > [!IMPORTANT]  
 > Ensure you've cloned [Taskify REST API](https://github.com/artyomagadzhanyan421/rest-api-taskify) repo and successfully launched localhost server first.

@@ -42,9 +42,15 @@ Some components and routes, for example ```/``` (home), ```/edit/:id```, or ```/
 - LoadingTask - Loading state for a single task
 - LoadingForm - Skeleton loader to render Edit page information 
 
-* `src/`
-    * `components/`
-        * `Error.tsx`
+src
+    ├───components
+    │   └───loading
+    ├───hooks
+    ├───redux
+    │   └───slices
+    ├───routes
+    ├───styles
+    └───types
 
 ## ⚙️ Installation & Setup
 

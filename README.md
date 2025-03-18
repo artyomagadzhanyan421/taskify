@@ -35,12 +35,12 @@ Some components and routes, for example ```/``` (home), ```/edit/:id```, or ```/
 
 ### Components
 - Navbar - Navigation bar with a sign-out button  
-- Tasks - Displays the list of tasks using a responsive grid layout  
+- Tasks - The list of tasks using a responsive grid layout  
 - NoTasks - Shows alert message if no tasks were created
 - Error - Renders API error messages  
 - LoadingTasks - Displays loader component for all tasks  
-- LoadingTask - Shows loading state for a single task
-- LoadingForm - Lands Skeleton loader to render Edit page information
+- LoadingTask - Loading state for a single task
+- LoadingForm - Skeleton loader to render Edit page information
 
 ## ⚙️ Installation & Setup
 

@@ -38,6 +38,9 @@ Taskify is a task management application that allows users to create, edit, read
 - LoadingTask - Shows loading state for a single task
 - LoadingForm - Lands Skeleton loader to render Edit page information
 
+> [!IMPORTANT]  
+> Ensure you've cloned [Taskify REST API](https://github.com/artyomagadzhanyan421/rest-api-taskify) repo and successfully launched localhost server first.
+
 # Installation & Setup
 
 Clone the repository:

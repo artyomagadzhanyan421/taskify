@@ -1,4 +1,4 @@
-# Taskify Frontend  
+# Taskify  
 
 Taskify is a task management application that allows users to create, edit, read, and delete tasks. This is the client-side of the project, built using **React** with **TypeScript** for a seamless and type-safe experience.  
 
@@ -32,3 +32,30 @@ Taskify is a task management application that allows users to create, edit, read
 - LoadingTasks — Displays loader component for all tasks  
 - LoadingTask - Shows loading state for a single task
 - LoadingForm - Lands Skeleton loader to render Edit page information
+
+# Installation & Setup
+
+Clone the repository:
+
+```sh
+git clone https://github.com/artyomagadzhanyan421/taskify.git
+cd taskify
+```
+
+Install dependencies:
+
+```sh
+npm install
+```
+
+Set up environment variables
+
+```bash
+VITE_TASKIFY_API=http://localhost:5000/
+```
+
+Start the application
+
+```sh
+npm run dev
+```

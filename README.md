@@ -34,12 +34,12 @@ Taskify is a task management application that allows users to create, edit, read
 Some components and routes, for example ```/``` (home), ```/edit/:id```, or ```/read/:id```, are only accessible to authenticated users. When a user signs in, the server generates a JWT and sends it back to the client. The token is then stored in ```localStorage```.
 
 ### Pages  
-- SignUp - Create a new account  
-- SignIn - Log in to access tasks  
-- Home - View tasks and navigate using the Navbar  
-- Read - View detailed information about a task  
-- Edit - Edit an existing task  
-- Add - Create a new task  
+- SignUp - create a new account  
+- SignIn - log in to access tasks  
+- Home - view tasks and navigate using the Navbar  
+- Read - view detailed information about a task  
+- Edit - edit an existing task  
+- Add - create a new task  
 
 ### Components
 - Navbar - Navigation bar with a sign-out button  

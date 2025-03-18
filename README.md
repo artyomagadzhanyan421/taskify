@@ -18,6 +18,8 @@ Taskify is a task management application that allows users to create, edit, read
 - [Redux Toolkit](https://github.com/reduxjs/redux.git) for state management  
 - [React Router](https://github.com/remix-run/react-router.git) for navigation  
 - [Vite](https://github.com/vitejs/vite.git) for fast development  
+- [React Loading Skeleton](https://github.com/dvtng/react-loading-skeleton.git) for loading states
+- [Boxicons](https://github.com/atisawd/boxicons.git) for web icons integration
 
 ## Pages  
 - Sign Up Page — Create a new account  

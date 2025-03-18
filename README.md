@@ -42,6 +42,8 @@ Some components and routes, for example ```/``` (home), ```/edit/:id```, or ```/
 - LoadingTask - Shows loading state for a single task
 - LoadingForm - Lands Skeleton loader to render Edit page information
 
+---
+
 ## Installation & Setup
 
 > [!IMPORTANT]  

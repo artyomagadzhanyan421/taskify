@@ -22,19 +22,19 @@ Taskify is a task management application that allows users to create, edit, read
 - [Boxicons](https://github.com/atisawd/boxicons.git) for web icons integration
 
 ## Pages  
-- Sign Up Page — Create a new account  
-- Sign In Page — Log in to access tasks  
-- Home Page — View tasks and navigate using the Navbar  
-- Read Page — View detailed information about a task  
-- Edit Page — Edit an existing task  
-- Add Page — Create a new task  
+- SignUp Page - Create a new account  
+- SignIn Page - Log in to access tasks  
+- Home Page - View tasks and navigate using the Navbar  
+- Read Page - View detailed information about a task  
+- Edit Page - Edit an existing task  
+- Add Page - Create a new task  
 
 ## Components
-- Navbar — Navigation bar with a sign-out button  
-- Tasks — Displays the list of tasks using a responsive grid layout  
+- Navbar - Navigation bar with a sign-out button  
+- Tasks - Displays the list of tasks using a responsive grid layout  
 - NoTasks - Shows alert message if no tasks were created
-- Error — Renders API error messages  
-- LoadingTasks — Displays loader component for all tasks  
+- Error - Renders API error messages  
+- LoadingTasks - Displays loader component for all tasks  
 - LoadingTask - Shows loading state for a single task
 - LoadingForm - Lands Skeleton loader to render Edit page information
 

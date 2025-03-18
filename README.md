@@ -42,7 +42,7 @@ Some components and routes, for example ```/``` (home), ```/edit/:id```, or ```/
 - LoadingTask - Shows loading state for a single task
 - LoadingForm - Lands Skeleton loader to render Edit page information
 
-## Installation & Setup
+## ⚙️ Installation & Setup
 
 > [!IMPORTANT]  
 > Ensure you've cloned [Taskify REST API](https://github.com/artyomagadzhanyan421/rest-api-taskify) repo and successfully launched localhost server first.

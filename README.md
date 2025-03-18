@@ -5,7 +5,7 @@ Taskify is a task management application that allows users to create, edit, read
 > [!IMPORTANT]  
 > Ensure you have the latest versions of [Node.js](https://nodejs.org/) and [Git](https://git-scm.com/) installed before proceeding.
 
-## Features  
+### Features  
 - JWT-based authentication (Sign Up, Sign In, Sign Out)  
 - CRUD operations for tasks  
 - Personalized greeting with the user's name  

@@ -21,6 +21,23 @@ function Tasks({ tasks, name }: TaskListProps) {
 
     const render = tasks.length > 0;
 
+    // Function to determine the class based on the task end date
+    const getDateClass = (endDate: string) => {
+        const currentDate = new Date();
+        const end = new Date(endDate);
+        const twoDaysBeforeEnd = new Date(end);
+        twoDaysBeforeEnd.setDate(end.getDate() - 2);
+
+        if (end < currentDate) {
+            return "taskDate redDate"; // If deadline is expired - Red
+        } else if (currentDate >= twoDaysBeforeEnd) {
+            return "taskDate yellowDate"; // Two days before deadline - Yellow
+        } else {
+            return "taskDate"; // Future date - Green
+        }
+    };
+
+
     if (render) {
         return (
             <div className="Tasks">
@@ -31,7 +48,7 @@ function Tasks({ tasks, name }: TaskListProps) {
                     {tasks.map((task) => (
                         <div className={lightMode ? "task lightTask" : "task"} key={task._id}>
                             <p className={lightMode ? "taskTitle lightTitle" : "taskTitle"}>{task.title}</p>
-                            <p className={lightMode ? "taskDate lightDate" : "taskDate"} style={{ fontWeight: 500 }}>
+                            <p className={getDateClass(task.endDate)}>
                                 {task.startDate} to {task.endDate}
                             </p>
                             <p className={lightMode ? "taskDesc lightDesc" : "taskDesc"}>{task.description}</p>

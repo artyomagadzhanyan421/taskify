@@ -29,7 +29,7 @@ Taskify is a task management application that allows users to create, edit, read
 - [React Loading Skeleton](https://github.com/dvtng/react-loading-skeleton.git) for loading states
 - [Boxicons](https://github.com/atisawd/boxicons.git) for web icons integration
 
-## ⚙️ Installation & Setup
+### Installation & Setup
 
 > [!IMPORTANT]  
 > Ensure you've cloned [Taskify REST API](https://github.com/artyomagadzhanyan421/rest-api-taskify) repo and successfully launched localhost server first.

@@ -36,7 +36,8 @@ function Home() {
           <Error error={error} />
         ) : (
           <>
-            <Tasks tasks={tasks ?? []} name={name} />
+            <p className={lightMode ? "heading lightHead" : "heading"}>Welcome, {name}!</p>
+            <Tasks tasks={tasks ?? []} />
             <Navbar />
           </>
         )}

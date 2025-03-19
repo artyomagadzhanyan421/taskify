@@ -53,6 +53,7 @@
     color: #14532D;
     background: #BBF7D0;
     width: fit-content;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 8px 16px;
     font-weight: 500;

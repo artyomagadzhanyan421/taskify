@@ -31,11 +31,6 @@
     border-color: #E4E4E7;
 }
 
-#readTask {
-    width: 584px;
-    margin-bottom: 50px;
-}
-
 .taskTitle {
     color: white;
     overflow: hidden;

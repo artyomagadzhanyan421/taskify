@@ -33,7 +33,7 @@ function Read() {
                 <LoadingTask />
             ) : (
                 <>
-                    <div className={lightMode ? "task lightTask" : "task"} id='readTask'>
+                    <div className={lightMode ? "task lightTask" : "task"} style={{ maxWidth: "584px", margin: "0px 0px 50px 0px" }}>
                         <p className={lightMode ? "taskTitle lightTitle" : "taskTitle"} id="readTaskTitle">{task?.title}</p>
                         <p className={lightMode ? "taskDate lightDate" : "taskDate"} style={{ fontWeight: 500 }}>
                             {task?.startDate} to {task?.endDate}

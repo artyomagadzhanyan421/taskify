@@ -1,8 +1,7 @@
 .Auth {
     background: #18181B;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-content: center;
     min-height: 100vh;
     padding: 100px 30px;
 }

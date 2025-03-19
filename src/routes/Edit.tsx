@@ -130,11 +130,11 @@ function Edit() {
               <p className={error ? "error" : "error errNone"}>{error}</p>
 
               <div className={lightMode ? "inputBox lightBox" : "inputBox"}>
-                <i className='bx bx-task'></i>
+                <i className='bx bx-task' id={lightMode ? "lightIcon" : ""}></i>
                 <input type="text" className={lightMode ? "lightInput" : ""} placeholder="Task title" value={title} onChange={(e) => setTitle(e.target.value)} required />
               </div>
               <div className={lightMode ? "inputBox lightBox" : "inputBox"}>
-                <i className='bx bx-calendar'></i>
+                <i className='bx bx-calendar' id={lightMode ? "lightIcon" : ""}></i>
                 <input
                   type={startInputType}
                   className={lightMode ? "lightInput" : ""}
@@ -149,7 +149,7 @@ function Edit() {
                 />
               </div>
               <div className={lightMode ? "inputBox lightBox" : "inputBox"}>
-                <i className='bx bx-calendar-check'></i>
+                <i className='bx bx-calendar-check' id={lightMode ? "lightIcon" : ""}></i>
                 <input
                   type={endInputType}
                   className={lightMode ? "lightInput" : ""}

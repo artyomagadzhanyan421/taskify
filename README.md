@@ -1,6 +1,6 @@
 # Taskify  
 
-![Static Badge](https://img.shields.io/badge/20.16.0-%236cc24a?label=node)
+![Static Badge](https://img.shields.io/badge/20.16.0-green?label=node)
 ![Static Badge](https://img.shields.io/badge/19.0.0-deepskyblue?label=react)
 ![Static Badge](https://img.shields.io/badge/~5.7.2-dodgerblue?label=typescript)
 ![Static Badge](https://img.shields.io/badge/%5E7.3.0-crimson?label=react-router)

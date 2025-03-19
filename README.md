@@ -18,7 +18,7 @@ Taskify is a task management application that allows users to create, edit, read
 - CRUD operations for tasks  
 - Personalized greeting with the user's name  
 - Responsive UI 
-- API Integration with [Taskify REST API](https://github.com/artyomagadzhanyan421/rest-api-taskify) (custom hook) 
+- REST API integration with [Taskify REST API](https://github.com/artyomagadzhanyan421/rest-api-taskify) (custom hook) 
 - Custom error handling and loading states  
 
 ### Tech Stack  

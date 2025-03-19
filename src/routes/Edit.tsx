@@ -69,6 +69,7 @@ function Edit() {
       const data = await response.json();
       if (response.ok) {
         navigate("/");
+        alert("Task edited successfully!");
       } else {
         setEdit(false);
         setError(data.message);
@@ -98,6 +99,7 @@ function Edit() {
       const data = await response.json();
       if (response.ok) {
         navigate("/");
+        alert("Task deleted successfully!");
       } else {
         setTrash(false);
         setError(data.message);

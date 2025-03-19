@@ -27,6 +27,8 @@ function Add() {
 
   const lightMode = useSelector((state: RootState) => state.light.light);
 
+  const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD
+
   // Create task
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
@@ -77,6 +79,7 @@ function Add() {
             onBlur={() => {
               if (!startDate) setStartInputType('text');
             }}
+            min={today}
             required
           />
         </div>
@@ -92,6 +95,7 @@ function Add() {
             onBlur={() => {
               if (!endDate) setEndInputType('text');
             }}
+            min={today}
             required
           />
         </div>

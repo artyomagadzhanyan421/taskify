@@ -36,6 +36,8 @@ function Edit() {
 
   const { tasks: task, loading } = useFetch<TypeTask>(`${apiUrl}tasks/${id}`);
 
+  const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD
+
   useEffect(() => {
     if (task) {
       setTitle(task.title);
@@ -145,6 +147,7 @@ function Edit() {
                   onBlur={() => {
                     if (!startDate) setStartInputType('text');
                   }}
+                  min={today}
                   required
                 />
               </div>
@@ -160,6 +163,7 @@ function Edit() {
                   onBlur={() => {
                     if (!endDate) setEndInputType('text');
                   }}
+                  min={today}
                   required
                 />
               </div>

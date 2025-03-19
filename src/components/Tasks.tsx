@@ -13,9 +13,10 @@ import { TypeTask } from "../types/TypeTask";
 
 type TaskListProps = {
     tasks: TypeTask[];
+    name: string | null;
 };
 
-function Tasks({ tasks }: TaskListProps) {
+function Tasks({ tasks, name }: TaskListProps) {
     const lightMode = useSelector((state: RootState) => state.light.light);
 
     const render = tasks.length > 0;
@@ -23,6 +24,7 @@ function Tasks({ tasks }: TaskListProps) {
     if (render) {
         return (
             <div className="Tasks">
+                <p className={lightMode ? "heading lightHead" : "heading"}>Welcome, {name}!</p>
 
                 {/* List of our tasks */}
                 <div className="taskGrid">

@@ -98,11 +98,8 @@
 
 .functions {
     display: flex;
-    gap: 10px;
-}
-
-.functions {
     width: fit-content;
+    gap: 10px;
 }
 
 .funcLink {

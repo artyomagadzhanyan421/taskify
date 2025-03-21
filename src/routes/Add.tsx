@@ -36,7 +36,7 @@ function Add() {
 
     const token = localStorage.getItem("token");
 
-    const response = await fetch(`${apiUrl}tasks`, {
+    const response = await fetch(`http://localhost:5000/tasks`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -48,6 +48,7 @@ function Add() {
     const data = await response.json();
     if (response.ok) {
       navigate("/");
+      alert("Task created successfully!");
     } else {
       setDisbale(false);
       setError(data.message);

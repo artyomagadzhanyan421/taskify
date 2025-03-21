@@ -19,7 +19,7 @@ function Read() {
     const { id } = useParams();
     const lightMode = useSelector((state: RootState) => state.light.light);
 
-    const { tasks: task, loading } = useFetch<TypeTask>(`${apiUrl}tasks/${id}`);
+    const { tasks: task, loading } = useFetch<TypeTask>(`http://localhost:5000/tasks/${id}`);
 
     useEffect(() => {
         if (task) {

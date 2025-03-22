@@ -104,27 +104,6 @@
     gap: 10px;
 }
 
-.funcLink {
-    background-color: #7E22CE;
-    color: white;
-    display: flex;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    align-items: center;
-    width: fit-content;
-    font-size: 15px;
-    gap: 12.5px;
-    font-weight: 550;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.2);
-
-    &:hover {
-        background-color: #6B21A8;
-    }
-}
-
 @media(max-width: 1100px) {
     .taskGrid {
         grid-template-columns: repeat(2, 1fr);

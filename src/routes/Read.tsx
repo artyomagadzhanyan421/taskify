@@ -39,6 +39,9 @@ function Read() {
                             {task?.startDate} to {task?.endDate}
                         </p>
                         <p className={lightMode ? "taskDesc lightDesc" : "taskDesc"} id="readTaskDesc">{task?.description}</p>
+                        <div className="functions" style={{ marginTop: 20 }}>
+                            <button>Completed</button>
+                        </div>
                     </div >
                     <Navbar />
                 </>

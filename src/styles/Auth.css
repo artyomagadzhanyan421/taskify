@@ -50,7 +50,8 @@ form textarea::placeholder {
 
 form textarea,
 form input,
-form button {
+form button,
+.functions a {
     color: white;
     outline: none;
     resize: none;
@@ -65,14 +66,15 @@ form button {
     color: black;
 }
 
-.lightInput::placeholder, 
+.lightInput::placeholder,
 .lightText::placeholder {
     color: #71717A;
 }
 
 .inputBox,
-form button, 
-form textarea {
+form button,
+form textarea,
+.functions a {
     background: #3F3F46;
     display: flex;
     align-items: center;
@@ -97,7 +99,9 @@ form textarea:focus-within {
     border-color: #A1A1AA;
 }
 
-form button {
+form button,
+.functions a {
+    color: white;
     background-color: #7E22CE;
     cursor: pointer;
     justify-content: center;
@@ -116,7 +120,7 @@ form i {
     color: #71717A;
 }
 
-.trash {
+form .trash {
     background-color: #B91C1C;
 
     &:hover {

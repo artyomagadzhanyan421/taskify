@@ -80,7 +80,6 @@ function Add() {
             onBlur={() => {
               if (!startDate) setStartInputType('text');
             }}
-            min={today}
             required
           />
         </div>
@@ -102,7 +101,7 @@ function Add() {
         </div>
         <textarea className={lightMode ? "lightText" : ""} placeholder="Task description" onChange={(e) => setDescription(e.target.value)} />
 
-        <button type="submit" disabled={disable}>
+        <button className="btn" type="submit" disabled={disable}>
           <i className={disable ? "bx bx-refresh" : "bx bx-plus-circle"} style={{ color: "white" }}></i>
           <span>{disable ? "Creating..." : "Create task"}</span>
         </button>

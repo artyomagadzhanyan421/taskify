@@ -22,7 +22,7 @@ function Read() {
 
     const { tasks: task, loading } = useFetch<TypeTask>(`${apiUrl}tasks/${id}`);
 
-    const [status, setStatus] = useState<string | undefined>(task?.status);
+    const [status, setStatus] = useState<string>("pending");
     const [isChanging, setIsChanging] = useState(false);
 
     // Toggle Status Handler
@@ -55,6 +55,7 @@ function Read() {
     useEffect(() => {
         if (task) {
             document.title = `${task.title}`;
+            setStatus(task.status);
         }
     }, [task]);
 
@@ -73,7 +74,7 @@ function Read() {
                         <div className="functions" style={{ marginTop: 20 }}>
                             <button className="btn completed" style={{ boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)" }} onClick={handleToggleStatus}>
                                 <i className={isChanging ? 'bx bx-refresh' : "bx bx-check-circle"} style={{ color: "white" }}></i>
-                                <span>{isChanging ? "Changing..." : status === "completed" ? "Mark as Pending" : "Mark as Done"}</span>
+                                <span>{isChanging ? "Changing..." : status === "completed" ? "Mark as pending" : "Mark as completed"}</span>
                             </button>
                         </div>
                     </div >

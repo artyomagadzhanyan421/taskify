@@ -52,7 +52,8 @@ form textarea,
 form input,
 form button,
 .functions a,
-.functions button {
+.functions button,
+.btn {
     color: white;
     outline: none;
     resize: none;
@@ -76,7 +77,8 @@ form button,
 form button,
 form textarea,
 .functions a,
-.functions button {
+.functions button,
+.btn {
     background: #3F3F46;
     display: flex;
     align-items: center;
@@ -103,7 +105,8 @@ form textarea:focus-within {
 
 form button,
 .functions a,
-.functions button {
+.functions button,
+.btn {
     color: white;
     background-color: #7E22CE;
     cursor: pointer;
@@ -114,7 +117,7 @@ form button,
     }
 }
 
-form i, 
+form i,
 .functions i {
     color: #A1A1AA;
     font-size: 25px;

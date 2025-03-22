@@ -22,8 +22,8 @@ function Error({ error }: TypeError) {
             <center>
                 <button
                     onClick={handleSignOut}
-                    className="funcLink"
-                    style={{ boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2" }}
+                    className="btn"
+                    style={{ width: "fit-content", boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)" }}
                 >
                     <i className='bx bx-log-out-circle' style={{ fontSize: 25 }}></i>
                     <span>Leave account</span>

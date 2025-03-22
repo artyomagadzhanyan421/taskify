@@ -12,8 +12,8 @@ function NoTasks() {
             <center>
                 <Link
                     to="/add"
-                    className="funcLink"
-                    style={{ boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2" }}
+                    className="btn"
+                    style={{ width: "fit-content", boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)" }}
                 >
                     <i className='bx bx-plus-circle' style={{ fontSize: 25 }}></i>
                     <span>Add tasks</span>

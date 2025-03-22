@@ -53,11 +53,11 @@ function Tasks({ tasks, name }: TaskListProps) {
                             <p className={lightMode ? "taskDesc lightDesc" : "taskDesc"}>{task.description}</p>
                             <div className="functions">
                                 <Link to={`read/${task._id}`} className="funcLink">
-                                    <i className='bx bx-help-circle' style={{ fontSize: 25 }}></i>
+                                    <i className='bx bx-help-circle' style={{ fontSize: 25, color: "white" }}></i>
                                     <span>Read</span>
                                 </Link>
                                 <Link to={`edit/${task._id}`} className="funcLink">
-                                    <i className='bx bx-edit-alt' style={{ fontSize: 25 }}></i>
+                                    <i className='bx bx-edit-alt' style={{ fontSize: 25, color: "white" }}></i>
                                     <span>Edit</span>
                                 </Link>
                             </div>

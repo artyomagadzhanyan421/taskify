@@ -26,6 +26,11 @@
     font-size: 15px;
 }
 
+.task button, 
+.task a {
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.2);
+}
+
 .task.lightTask {
     background: #F4F4F5;
     border-color: #E4E4E7;

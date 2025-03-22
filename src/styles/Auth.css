@@ -51,7 +51,8 @@ form textarea::placeholder {
 form textarea,
 form input,
 form button,
-.functions a {
+.functions a,
+.functions button {
     color: white;
     outline: none;
     resize: none;
@@ -74,7 +75,8 @@ form button,
 .inputBox,
 form button,
 form textarea,
-.functions a {
+.functions a,
+.functions button {
     background: #3F3F46;
     display: flex;
     align-items: center;
@@ -100,7 +102,8 @@ form textarea:focus-within {
 }
 
 form button,
-.functions a {
+.functions a,
+.functions button {
     color: white;
     background-color: #7E22CE;
     cursor: pointer;
@@ -111,7 +114,8 @@ form button,
     }
 }
 
-form i {
+form i, 
+.functions i {
     color: #A1A1AA;
     font-size: 25px;
 }
@@ -125,6 +129,14 @@ form .trash {
 
     &:hover {
         background-color: #991B1B;
+    }
+}
+
+.functions .completed {
+    background-color: #15803D;
+
+    &:hover {
+        background-color: #166534;
     }
 }
 

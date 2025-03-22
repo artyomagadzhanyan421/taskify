@@ -40,7 +40,10 @@ function Read() {
                         </p>
                         <p className={lightMode ? "taskDesc lightDesc" : "taskDesc"} id="readTaskDesc">{task?.description}</p>
                         <div className="functions" style={{ marginTop: 20 }}>
-                            <button>Completed</button>
+                            <button className="completed">
+                                <i className='bx bx-check-circle' style={{ color: "white" }}></i>
+                                <span>Mark as done</span>
+                            </button>
                         </div>
                     </div >
                     <Navbar />

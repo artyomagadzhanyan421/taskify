@@ -52,7 +52,6 @@ form textarea,
 form input,
 form button,
 .functions a,
-.functions button,
 .btn {
     color: white;
     outline: none;
@@ -77,7 +76,6 @@ form button,
 form button,
 form textarea,
 .functions a,
-.functions button,
 .btn {
     background: #3F3F46;
     display: flex;
@@ -105,7 +103,6 @@ form textarea:focus-within {
 
 form button,
 .functions a,
-.functions button,
 .btn {
     color: white;
     background-color: #7E22CE;

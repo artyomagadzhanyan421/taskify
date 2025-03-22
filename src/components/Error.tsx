@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
 
 type TypeError = {
     error: string
@@ -15,10 +17,12 @@ function Error({ error }: TypeError) {
         navigate('/signin');
     };
 
+    const lightMode = useSelector((state: RootState) => state.light.light);
+
     return (
         <div className="Error">
-            <center><p className="heading">Error 404</p></center>
-            <center><p className="taskDesc noTasks">{error}, please refresh the current page or enter your account again.</p></center>
+            <center><p className={lightMode ? "heading lightHead" : "heading"}>Error 404</p></center>
+            <center><p className={lightMode ? "taskDesc lightDesc" : "taskDesc"} id="noTasks">{error}, please refresh the current page or enter your account again.</p></center>
             <center>
                 <button
                     onClick={handleSignOut}

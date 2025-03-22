@@ -47,9 +47,13 @@ function Tasks({ tasks, name }: TaskListProps) {
                     {tasks.map((task) => (
                         <div className={lightMode ? "task lightTask" : "task"} key={task._id}>
                             <p className={lightMode ? "taskTitle lightTitle" : "taskTitle"}>{task.title}</p>
-                            <p className={getDateClass(task.endDate)}>
-                                {task.startDate} to {task.endDate}
-                            </p>
+                            {task.status === "completed" ? (
+                                <p className="taskDate">Completed</p>
+                            ) : (
+                                <p className={getDateClass(task.endDate)}>
+                                    {task.startDate} to {task.endDate}
+                                </p>
+                            )}
                             <p className={lightMode ? "taskDesc lightDesc" : "taskDesc"}>{task.description}</p>
                             <div className="functions">
                                 <Link to={`read/${task._id}`} className="btn" style={{ boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)" }}>

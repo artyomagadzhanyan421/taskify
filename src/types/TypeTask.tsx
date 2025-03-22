@@ -4,4 +4,5 @@ export type TypeTask = {
     startDate: string;
     endDate: string;
     description: string;
+    status: string;
 }

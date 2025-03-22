@@ -37,7 +37,6 @@ function Tasks({ tasks, name }: TaskListProps) {
         }
     };
 
-
     if (render) {
         return (
             <div className="Tasks">

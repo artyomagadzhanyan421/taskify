@@ -29,12 +29,8 @@ function Navbar() {
                 </Link>
                 <Link to="/add" className={lightMode ? "lightLink": ""}>
                     <span className={lightMode ? "lightSpan": ""}>Add</span>
-                    <i className='bx bx-plus-circle' id={lightMode ? "iconLight" : ""}></i>
+                    <i className='bx bx-add-to-queue' id={lightMode ? "iconLight" : ""}></i>
                 </Link>
-                <button className={lightMode ? "lightLink": ""}>
-                    <span className={lightMode ? "lightSpan": ""}>Filters</span>
-                    <i className='bx bx-filter-alt' id={lightMode ? "iconLight" : ""}></i>
-                </button>
                 <button className={lightMode ? "lightLink": ""} onClick={() => dispatch(toggleLight())}>
                     <span className={lightMode ? "lightSpan": ""}>Light</span>
                     <i className='bx bx-sun' id={lightMode ? "iconLight" : ""}></i>

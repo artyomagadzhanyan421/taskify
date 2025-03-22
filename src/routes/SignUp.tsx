@@ -72,7 +72,7 @@ function SignUp() {
           <input type={show ? "text" : "password"} className={lightMode ? "lightInput" : ""} placeholder="Password" onChange={(e) => setPassword(e.target.value)} required />
           <i className='bx bx-show' id={lightMode ? "lightIcon" : ""} style={{ cursor: "pointer" }} onClick={showPassword}></i>
         </div>
-        <button type="submit" disabled={disable}>
+        <button className="btn" type="submit" disabled={disable}>
           <i className={disable ? 'bx bx-refresh' : 'bx bx-plus-circle'} style={{ color: "white" }}></i>
           <span>{disable ? "Creating..." : "Create account"}</span>
         </button>

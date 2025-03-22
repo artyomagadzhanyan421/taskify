@@ -172,11 +172,11 @@ function Edit() {
               <textarea className={lightMode ? "lightText" : ""} placeholder="Task description" value={description} onChange={(e) => setDescription(e.target.value)} />
 
               <div className="functions">
-                <button disabled={edit}>
+                <button className="btn" disabled={edit}>
                   <i className={edit ? "bx bx-refresh" : "bx bx-plus-circle"} style={{ color: "white" }}></i>
                   <span>{edit ? "Editing..." : "Edit"}</span>
                 </button>
-                <button type="button" onClick={handleDelete} className="trash" disabled={trash}>
+                <button type="button" onClick={handleDelete} className="btn trash" disabled={trash}>
                   <i className={trash ? "bx bx-refresh" : "bx bx-trash"} style={{ color: "white" }}></i>
                   <span>{trash ? "Trashing..." : "Trash"}</span>
                 </button>

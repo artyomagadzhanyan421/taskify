@@ -71,7 +71,7 @@ function Read() {
                         </p>
                         <p className={lightMode ? "taskDesc lightDesc" : "taskDesc"} id="readTaskDesc">{task?.description}</p>
                         <div className="functions" style={{ marginTop: 20 }}>
-                            <button className="completed" style={{ boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)" }} onClick={handleToggleStatus}>
+                            <button className="btn completed" style={{ boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)" }} onClick={handleToggleStatus}>
                                 <i className={isChanging ? 'bx bx-refresh' : "bx bx-check-circle"} style={{ color: "white" }}></i>
                                 <span>{isChanging ? "Changing..." : status === "completed" ? "Mark as Pending" : "Mark as Done"}</span>
                             </button>

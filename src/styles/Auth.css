@@ -50,9 +50,6 @@ form textarea::placeholder {
 
 form textarea,
 form input,
-form button,
-.functions a,
-.functions button,
 .btn {
     color: white;
     outline: none;
@@ -74,10 +71,7 @@ form button,
 }
 
 .inputBox,
-form button,
 form textarea,
-.functions a,
-.functions button,
 .btn {
     background: #3F3F46;
     display: flex;
@@ -103,8 +97,6 @@ form textarea:focus-within {
     border-color: #A1A1AA;
 }
 
-form button,
-.functions a,
 .btn {
     color: white;
     background-color: #7E22CE;
@@ -126,7 +118,7 @@ form i,
     color: #71717A;
 }
 
-form .trash {
+.btn.trash {
     background-color: #B91C1C;
 
     &:hover {
@@ -134,7 +126,7 @@ form .trash {
     }
 }
 
-.functions .completed {
+.btn.completed {
     cursor: pointer;
     background-color: #15803D;
 

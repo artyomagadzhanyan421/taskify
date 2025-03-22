@@ -52,11 +52,11 @@ function Tasks({ tasks, name }: TaskListProps) {
                             </p>
                             <p className={lightMode ? "taskDesc lightDesc" : "taskDesc"}>{task.description}</p>
                             <div className="functions">
-                                <Link to={`read/${task._id}`} style={{boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)"}}>
+                                <Link to={`read/${task._id}`} className="btn" style={{ boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)" }}>
                                     <i className='bx bx-help-circle' style={{ fontSize: 25, color: "white" }}></i>
                                     <span>Read</span>
                                 </Link>
-                                <Link to={`edit/${task._id}`} style={{boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)"}}>
+                                <Link to={`edit/${task._id}`} className="btn" style={{ boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)" }}>
                                     <i className='bx bx-edit-alt' style={{ fontSize: 25, color: "white" }}></i>
                                     <span>Edit</span>
                                 </Link>

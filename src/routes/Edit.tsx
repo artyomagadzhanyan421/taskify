@@ -149,7 +149,6 @@ function Edit() {
                   onBlur={() => {
                     if (!startDate) setStartInputType('text');
                   }}
-                  min={today}
                   required
                 />
               </div>

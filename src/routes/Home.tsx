@@ -19,7 +19,7 @@ const apiUrl = import.meta.env.VITE_TASKIFY_API;
 function Home() {
   const lightMode = useSelector((state: RootState) => state.light.light);
 
-  const { name, username, loading, error, tasks } = useFetch<TypeTask[]>(`http://localhost:5000/tasks`);
+  const { name, username, loading, error, tasks } = useFetch<TypeTask[]>(`${apiUrl}tasks`);
 
   useEffect(() => {
     if (username) {

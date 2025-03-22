@@ -27,7 +27,7 @@ function SignUp() {
 
     setDisbale(true);
 
-    const response = await fetch(`http://localhost:5000/signup`, {
+    const response = await fetch(`${apiUrl}signup`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, username, email, password }),

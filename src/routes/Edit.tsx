@@ -57,7 +57,7 @@ function Edit() {
     const token = localStorage.getItem("token");
 
     try {
-      const response = await fetch(`http://localhost:5000/tasks/${id}`, {
+      const response = await fetch(`${apiUrl}tasks/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -88,7 +88,7 @@ function Edit() {
     const token = localStorage.getItem("token");
 
     try {
-      const response = await fetch(`http://localhost:5000/tasks/${id}`, {
+      const response = await fetch(`${apiUrl}tasks/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",

@@ -36,7 +36,7 @@ function Add() {
 
     const token = localStorage.getItem("token");
 
-    const response = await fetch(`http://localhost:5000/tasks`, {
+    const response = await fetch(`${apiUrl}tasks`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

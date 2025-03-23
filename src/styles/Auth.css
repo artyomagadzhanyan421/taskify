@@ -1,3 +1,4 @@
+/* Main block */
 .Auth {
     background: #18181B;
     display: flex;
@@ -11,11 +12,13 @@
     background: #FAFAFA;
 }
 
+/* Iput wrapper */
 .boxFlex {
     display: flex;
     gap: 10px;
 }
 
+/* Form */
 form {
     background: #27272A;
     display: flex;
@@ -27,6 +30,7 @@ form {
     border-radius: 15px;
 }
 
+/* Form heading */
 form h2 {
     color: white;
     width: fit-content;
@@ -43,11 +47,13 @@ form h2 {
     border-color: #E4E4E7;
 }
 
+/* Placeholders for inputs */
 form input::placeholder,
 form textarea::placeholder {
     color: #A1A1AA;
 }
 
+/* Textarea, input and button setup */
 form textarea,
 form input,
 .btn {
@@ -70,6 +76,7 @@ form input,
     color: #71717A;
 }
 
+/* Input wrapper, textare and button size setup */
 .inputBox,
 form textarea,
 .btn {
@@ -82,12 +89,6 @@ form textarea,
     border-radius: 8px;
 }
 
-.inputBox.lightBox,
-.lightText {
-    color: black;
-    background: #E4E4E7;
-}
-
 form textarea {
     height: 300px;
 }
@@ -97,6 +98,13 @@ form textarea:focus-within {
     border-color: #A1A1AA;
 }
 
+.inputBox.lightBox,
+.lightText {
+    color: black;
+    background: #E4E4E7;
+}
+
+/* Form button */
 .btn {
     color: white;
     background-color: #7E22CE;
@@ -108,6 +116,7 @@ form textarea:focus-within {
     }
 }
 
+/* Form icons */
 form i,
 .functions i,
 .btn i {
@@ -119,6 +128,7 @@ form i,
     color: #71717A;
 }
 
+/* Delete button colors */
 .btn.trash {
     background-color: #B91C1C;
 
@@ -127,6 +137,7 @@ form i,
     }
 }
 
+/* Read routes button colors */
 .btn.completed {
     cursor: pointer;
     background-color: #15803D;
@@ -136,6 +147,7 @@ form i,
     }
 }
 
+/* Auth form text */
 .signInLink {
     display: inline-block;
     color: #71717A;
@@ -144,6 +156,7 @@ form i,
     font-weight: 550;
 }
 
+/* Form's error message */
 .error {
     background-color: #FEE2E2;
     color: #EF4444;
@@ -159,6 +172,7 @@ form i,
     display: none;
 }
 
+/* Media queries */
 @media(max-width: 520px) {
     .boxFlex {
         flex-direction: column;

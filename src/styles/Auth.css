@@ -109,7 +109,8 @@ form textarea:focus-within {
 }
 
 form i,
-.functions i {
+.functions i, 
+.btn i {
     color: #A1A1AA;
     font-size: 25px;
 }

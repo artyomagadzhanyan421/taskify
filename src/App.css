@@ -13,6 +13,36 @@
     max-width: 1100px;
 }
 
+.homeFlex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.Filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    backdrop-filter: blur(5px);
+    background: rgb(24, 24, 27, 0.5);
+    opacity: 0;
+    min-height: 100vh;
+    padding: 100px 30px;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+.Filters.drop {
+    pointer-events: all;
+    opacity: 1;
+}
+
 @media(max-width: 450px) {
     .Home {
         padding: 100px 30px;

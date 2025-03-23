@@ -1,7 +1,5 @@
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-import { filter } from "../redux/slices/filterMenuSlice";
 import { RootState } from "../redux/store";
 
 // Components
@@ -21,8 +19,6 @@ const apiUrl = import.meta.env.VITE_TASKIFY_API;
 function Home() {
   const lightMode = useSelector((state: RootState) => state.light.light);
 
-  const dispatch = useDispatch();
-
   const { name, username, loading, error, tasks } = useFetch<TypeTask[]>(`${apiUrl}tasks`);
 
   useEffect(() => {
@@ -30,10 +26,6 @@ function Home() {
       document.title = `Taskify | ${username}`;
     }
   }, [username]);
-
-  const filterFunc = () => {
-    dispatch(filter());
-  }
 
   return (
     <div className={lightMode ? "Home toggleHome" : "Home"}>
@@ -44,13 +36,7 @@ function Home() {
           <Error error={error} />
         ) : (
           <>
-            <div className="homeFlex">
-              <p className={lightMode ? "heading lightHead" : "heading"}>Welcome, {name}!</p>
-              <button className="btn" onClick={filterFunc} style={{ width: "fit-content", boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)" }}>
-                <i className='bx bx-filter-alt' style={{ color: "white" }}></i>
-                <span>Filters</span>
-              </button>
-            </div>
+            <p className={lightMode ? "heading lightHead" : "heading"}>Welcome, {name}!</p>
             <Tasks tasks={tasks ?? []} />
             <Navbar />
           </>

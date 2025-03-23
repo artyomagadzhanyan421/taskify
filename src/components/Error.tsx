@@ -29,7 +29,7 @@ function Error({ error }: TypeError) {
                     className="btn"
                     style={{ width: "fit-content", boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)" }}
                 >
-                    <i className='bx bx-log-out-circle' style={{ fontSize: 25 }}></i>
+                    <i className='bx bx-log-out-circle' style={{ color: "white", fontSize: 25 }}></i>
                     <span>Leave account</span>
                 </button>
             </center>

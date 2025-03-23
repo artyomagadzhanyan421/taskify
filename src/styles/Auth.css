@@ -49,6 +49,7 @@ form textarea::placeholder {
 }
 
 form textarea,
+form select,
 form input,
 .btn {
     color: white;
@@ -72,6 +73,7 @@ form input,
 
 .inputBox,
 form textarea,
+form select,
 .btn {
     background: #3F3F46;
     display: flex;
@@ -92,8 +94,15 @@ form textarea {
     height: 300px;
 }
 
+form select {
+    cursor: pointer;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
 .inputBox:focus-within,
-form textarea:focus-within {
+form textarea:focus-within,
+form select:focus-within {
     border-color: #A1A1AA;
 }
 
@@ -109,7 +118,7 @@ form textarea:focus-within {
 }
 
 form i,
-.functions i, 
+.functions i,
 .btn i {
     color: #A1A1AA;
     font-size: 25px;

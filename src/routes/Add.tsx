@@ -34,13 +34,11 @@ function Add() {
     e.preventDefault();
     setDisbale(true);
 
-    const token = localStorage.getItem("token");
-
     const response = await fetch(`${apiUrl}tasks`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
       body: JSON.stringify({ title, startDate, endDate, description }),
     })
@@ -111,4 +109,4 @@ function Add() {
   )
 }
 
-export default Add
+export default Add;

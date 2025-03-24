@@ -23,4 +23,4 @@ function NoTasks() {
     )
 }
 
-export default NoTasks
+export default NoTasks;

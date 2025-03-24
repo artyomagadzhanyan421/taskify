@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
-import { toggleFilter  } from "../redux/slices/filterMenuSlice";
+import { toggleFilter } from "../redux/slices/filterMenuSlice";
 
 // Components
 import Navbar from "../components/Navbar";
@@ -31,10 +31,6 @@ function Home() {
     }
   }, [username]);
 
-  const filterFunc = () => {
-    dispatch(toggleFilter ());
-  }
-
   return (
     <div className={lightMode ? "Home toggleHome" : "Home"}>
       <div className="block">
@@ -44,18 +40,7 @@ function Home() {
           <Error error={error} />
         ) : (
           <>
-            <div className="filterFlex">
-              <p className={lightMode ? "heading lightHead" : "heading"}>Welcome, {name}!</p>
-              <button onClick={filterFunc} className="btn" style={{
-                color: "white",
-                width: "fit-content",
-                boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)"
-              }}>
-                <i className='bx bx-filter-alt' style={{ color: "white" }}></i>
-                <span>Filter</span>
-              </button>
-            </div>
-            <Tasks tasks={tasks ?? []} />
+            <Tasks name={name} tasks={tasks ?? []} />
             <Navbar />
             <Filter />
           </>

@@ -1,5 +1,6 @@
 import { Link } from "react-router";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleFilter } from "../redux/slices/filterMenuSlice";
 import { RootState } from "../redux/store";
 
 // CSS
@@ -12,11 +13,26 @@ import NoTasks from "./NoTasks";
 import { TypeTask } from "../types/TypeTask";
 
 type TaskListProps = {
+    name: string | null;
     tasks: TypeTask[];
 };
 
-function Tasks({ tasks }: TaskListProps) {
+function Tasks({ tasks, name }: TaskListProps) {
+    const dispatch = useDispatch();
+
     const lightMode = useSelector((state: RootState) => state.light.light);
+    const filters = useSelector((state: RootState) => state.filter);
+
+    // Function to filter tasks based on filter state
+    const filteredTasks = tasks.filter((task) => {
+        const matchesTitle = filters.title ? task.title.toLowerCase().includes(filters.title.toLowerCase()) : true;
+        const matchesStartDate = filters.startDate ? new Date(task.startDate) >= new Date(filters.startDate) : true;
+        const matchesEndDate = filters.endDate ? new Date(task.endDate) <= new Date(filters.endDate) : true;
+        const matchesStatus = filters.status ? task.status === filters.status : true;
+        const matchesDescription = filters.description ? task.description.toLowerCase().includes(filters.description.toLowerCase()) : true;
+
+        return matchesTitle && matchesStartDate && matchesEndDate && matchesStatus && matchesDescription;
+    });
 
     const render = tasks.length > 0;
 
@@ -39,10 +55,21 @@ function Tasks({ tasks }: TaskListProps) {
     if (render) {
         return (
             <div className="Tasks">
+                <div className="filterFlex">
+                    <p className={lightMode ? "heading lightHead" : "heading"}>Welcome, {name}!</p>
+                    <button onClick={() => dispatch(toggleFilter())} className="btn" style={{
+                        color: "white",
+                        width: "fit-content",
+                        boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)"
+                    }}>
+                        <i className='bx bx-filter-alt' style={{ color: "white" }}></i>
+                        <span>Filter</span>
+                    </button>
+                </div>
 
                 {/* List of our tasks */}
                 <div className="taskGrid">
-                    {tasks.map((task) => (
+                    {filteredTasks.map((task) => (
                         <div className={lightMode ? "task lightTask" : "task"} key={task._id}>
                             <p className={lightMode ? "taskTitle lightTitle" : "taskTitle"}>{task.title}</p>
                             {task.status === "completed" ? (
@@ -54,12 +81,16 @@ function Tasks({ tasks }: TaskListProps) {
                             )}
                             <p className={lightMode ? "taskDesc lightDesc" : "taskDesc"}>{task.description}</p>
                             <div className="functions">
-                                <Link to={`read/${task._id}`} className="btn" style={{ boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)" }}>
-                                    <i className='bx bx-help-circle' style={{ fontSize: 25, color: "white" }}></i>
+                                <Link to={`read/${task._id}`} className="btn" style={{
+                                    boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)"
+                                }}>
+                                    <i className='bx bx-help-circle' style={{ color: "white" }}></i>
                                     <span>Read</span>
                                 </Link>
-                                <Link to={`edit/${task._id}`} className="btn" style={{ boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)" }}>
-                                    <i className='bx bx-edit-alt' style={{ fontSize: 25, color: "white" }}></i>
+                                <Link to={`edit/${task._id}`} className="btn" style={{
+                                    boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)"
+                                }}>
+                                    <i className='bx bx-edit-alt' style={{ color: "white" }}></i>
                                     <span>Edit</span>
                                 </Link>
                             </div>
@@ -75,4 +106,4 @@ function Tasks({ tasks }: TaskListProps) {
     }
 }
 
-export default Tasks
+export default Tasks;

@@ -1,16 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const lightSlice = createSlice({
+export const filterMenuSlice = createSlice({
     name: "filter",
     initialState: {
-        filter: false
+        toggle: false
     },
     reducers: {
         toggleFilter: (state) => {
-            state.filter = !state.filter;
+            state.toggle = !state.toggle;
         }
     }
 });
 
-export const { toggleFilter } = lightSlice.actions;
-export default lightSlice.reducer;
+export const { toggleFilter } = filterMenuSlice.actions;
+export default filterMenuSlice.reducer;

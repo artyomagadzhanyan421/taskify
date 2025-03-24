@@ -54,14 +54,12 @@ function Edit() {
     e.preventDefault();
     setEdit(true);
 
-    const token = localStorage.getItem("token");
-
     try {
       const response = await fetch(`${apiUrl}tasks/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
         body: JSON.stringify({ title, startDate, endDate, description }),
       });
@@ -85,14 +83,12 @@ function Edit() {
   const handleDelete = async () => {
     setTrash(true);
 
-    const token = localStorage.getItem("token");
-
     try {
       const response = await fetch(`${apiUrl}tasks/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`
+          Authorization: `Bearer ${localStorage.getItem("token")}`
         }
       });
 

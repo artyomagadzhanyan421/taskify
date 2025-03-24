@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import lightReducer from "./slices/lightSlice";
-import filterReducer from "./slices/filterMenuSlice";
+import filterMenuReducer from "./slices/filterMenuSlice";
+import filterReducer from './slices/filterSlice';
 
 export const store = configureStore({
   reducer: {
     light: lightReducer,
-    filter: filterReducer
+    toggle: filterMenuReducer,
+    filter: filterReducer,
   },
 });
 

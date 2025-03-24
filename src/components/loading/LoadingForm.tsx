@@ -23,4 +23,4 @@ function LoadingForm() {
     )
 }
 
-export default LoadingForm
+export default LoadingForm;

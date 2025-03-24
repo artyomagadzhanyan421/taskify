@@ -21,4 +21,4 @@ function LoadingTask() {
     )
 }
 
-export default LoadingTask
+export default LoadingTask;

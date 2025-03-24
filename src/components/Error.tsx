@@ -37,4 +37,4 @@ function Error({ error }: TypeError) {
     )
 }
 
-export default Error
+export default Error;

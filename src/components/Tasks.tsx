@@ -34,6 +34,25 @@ function Tasks({ tasks, name }: TaskListProps) {
         return matchesTitle && matchesStartDate && matchesEndDate && matchesStatus && matchesDescription;
     });
 
+    if (filteredTasks.length === 0) {
+        return (
+            <div>
+                <center><p className={lightMode ? "heading lightHead" : "heading"}>No Tasks Found</p></center>
+                <center><p className={lightMode ? "taskDesc lightDesc" : "taskDesc"} id="noTasks">You have no tasks that match your filters. Please change filter parameters or refresh the page.</p></center>
+                <center>
+                    <button
+                        className="btn"
+                        onClick={() => dispatch(toggleFilter())}
+                        style={{ width: "fit-content", boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)" }}
+                    >
+                        <i className='bx bx-filter-alt' style={{ color: "white", fontSize: 25 }}></i>
+                        <span>Filter task</span>
+                    </button>
+                </center>
+            </div>
+        )
+    }
+
     const render = tasks.length > 0;
 
     // Function to determine the class based on the task end date

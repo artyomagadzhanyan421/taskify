@@ -34,26 +34,32 @@ function Tasks({ tasks, name }: TaskListProps) {
         return matchesTitle && matchesStartDate && matchesEndDate && matchesStatus && matchesDescription;
     });
 
+    // Condition: No tasks at all
+    if (tasks.length === 0) {
+        return <NoTasks />;
+    }
+
+    // Condition: No tasks matching filters
     if (filteredTasks.length === 0) {
         return (
             <div>
-                <center><p className={lightMode ? "heading lightHead" : "heading"}>No Tasks Found</p></center>
-                <center><p className={lightMode ? "taskDesc lightDesc" : "taskDesc"} id="noTasks">You have no tasks that match your filters. Please change filter parameters or refresh the page.</p></center>
                 <center>
+                    <p className={lightMode ? "heading lightHead" : "heading"}>No Tasks Found</p>
+                    <p className={lightMode ? "taskDesc lightDesc" : "taskDesc"} id="noTasks">
+                        You have no tasks that match your filters. Please change filter parameters or refresh the page.
+                    </p>
                     <button
                         className="btn"
                         onClick={() => dispatch(toggleFilter())}
                         style={{ width: "fit-content", boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)" }}
                     >
-                        <i className='bx bx-filter-alt' style={{ color: "white", fontSize: 25 }}></i>
+                        <i className="bx bx-filter-alt" style={{ color: "white", fontSize: 25 }}></i>
                         <span>Filter task</span>
                     </button>
                 </center>
             </div>
-        )
+        );
     }
-
-    const render = tasks.length > 0;
 
     // Function to determine the class based on the task end date
     const getDateClass = (endDate: string) => {
@@ -71,58 +77,64 @@ function Tasks({ tasks, name }: TaskListProps) {
         }
     };
 
-    if (render) {
-        return (
-            <div className="Tasks">
-                <div className="filterFlex">
-                    <p className={lightMode ? "heading lightHead" : "heading"}>Welcome, {name}!</p>
-                    <button onClick={() => dispatch(toggleFilter())} className="btn" style={{
+    return (
+        <div className="Tasks">
+            <div className="filterFlex">
+                <p className={lightMode ? "heading lightHead" : "heading"}>Welcome, {name}!</p>
+                <button
+                    onClick={() => dispatch(toggleFilter())}
+                    className="btn"
+                    style={{
                         color: "white",
                         width: "fit-content",
-                        boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)"
-                    }}>
-                        <i className='bx bx-filter-alt' style={{ color: "white" }}></i>
-                        <span>Filter</span>
-                    </button>
-                </div>
-
-                {/* List of our tasks */}
-                <div className="taskGrid">
-                    {filteredTasks.map((task) => (
-                        <div className={lightMode ? "task lightTask" : "task"} key={task._id}>
-                            <p className={lightMode ? "taskTitle lightTitle" : "taskTitle"}>{task.title}</p>
-                            {task.status === "completed" ? (
-                                <p className="taskDate">Completed</p>
-                            ) : (
-                                <p className={getDateClass(task.endDate)}>
-                                    {task.startDate} to {task.endDate}
-                                </p>
-                            )}
-                            <p className={lightMode ? "taskDesc lightDesc" : "taskDesc"}>{task.description}</p>
-                            <div className="functions">
-                                <Link to={`read/${task._id}`} className="btn" style={{
-                                    boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)"
-                                }}>
-                                    <i className='bx bx-help-circle' style={{ color: "white" }}></i>
-                                    <span>Read</span>
-                                </Link>
-                                <Link to={`edit/${task._id}`} className="btn" style={{
-                                    boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)"
-                                }}>
-                                    <i className='bx bx-edit-alt' style={{ color: "white" }}></i>
-                                    <span>Edit</span>
-                                </Link>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                        boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)",
+                    }}
+                >
+                    <i className="bx bx-filter-alt" style={{ color: "white" }}></i>
+                    <span>Filter</span>
+                </button>
             </div>
-        )
-    } else {
-        return (
-            <NoTasks />
-        )
-    }
+
+            {/* List of tasks */}
+            <div className="taskGrid">
+                {filteredTasks.map((task) => (
+                    <div className={lightMode ? "task lightTask" : "task"} key={task._id}>
+                        <p className={lightMode ? "taskTitle lightTitle" : "taskTitle"}>{task.title}</p>
+                        {task.status === "completed" ? (
+                            <p className="taskDate">Completed</p>
+                        ) : (
+                            <p className={getDateClass(task.endDate)}>
+                                {task.startDate} to {task.endDate}
+                            </p>
+                        )}
+                        <p className={lightMode ? "taskDesc lightDesc" : "taskDesc"}>{task.description}</p>
+                        <div className="functions">
+                            <Link
+                                to={`read/${task._id}`}
+                                className="btn"
+                                style={{
+                                    boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)",
+                                }}
+                            >
+                                <i className="bx bx-help-circle" style={{ color: "white" }}></i>
+                                <span>Read</span>
+                            </Link>
+                            <Link
+                                to={`edit/${task._id}`}
+                                className="btn"
+                                style={{
+                                    boxShadow: "2px 2px 4px rgb(0, 0, 0, 0.2)",
+                                }}
+                            >
+                                <i className="bx bx-edit-alt" style={{ color: "white" }}></i>
+                                <span>Edit</span>
+                            </Link>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    );
 }
 
 export default Tasks;

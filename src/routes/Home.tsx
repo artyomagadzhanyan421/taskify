@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
-import { toggleFilter } from "../redux/slices/filterMenuSlice";
 
 // Components
 import Navbar from "../components/Navbar";
@@ -15,13 +14,11 @@ import useFetch from "../hooks/useFetch";
 
 // Types
 import { TypeTask } from "../types/TypeTask";
-import { useDispatch } from "react-redux";
 
 const apiUrl = import.meta.env.VITE_TASKIFY_API;
 
 function Home() {
   const lightMode = useSelector((state: RootState) => state.light.light);
-  const dispatch = useDispatch();
 
   const { name, username, loading, error, tasks } = useFetch<TypeTask[]>(`${apiUrl}tasks`);
 

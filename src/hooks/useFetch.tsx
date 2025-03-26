@@ -29,6 +29,15 @@ function useFetch<T>(url: string) {
                     headers: { Authorization: `Bearer ${token}` },
                 });
 
+                if (response.status === 401) { // Unauthorized (Token expired or invalid)
+                    localStorage.removeItem("token");
+                    localStorage.removeItem("username");
+                    localStorage.removeItem("name");
+                    window.dispatchEvent(new Event("tokenChange")); // Sync logout across tabs
+                    navigate("/signin");
+                    return;
+                }
+
                 if (!response.ok) {
                     throw new Error("Failed to fetch tasks");
                 }
